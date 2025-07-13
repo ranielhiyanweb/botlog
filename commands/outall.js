@@ -15,7 +15,7 @@ module.exports = {
           titleFont: "double_struck",
           contentFont: "fancy_italic",
           emojis: "🚪",
-          content: `❌ Only admins can use this command.\n> Thanks for using Cid Kagenou bot`
+          content: `❌ Only Raniel Hiyan can use this command.\n> Thanks for using Cid Kagenou bot`
         });
         return api.sendMessage(msg, threadID, messageID);
       }

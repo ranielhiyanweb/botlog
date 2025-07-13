@@ -30,7 +30,7 @@ const topGoonerCommand: ShadowBot.Command = {
       headerStyle: "bold",
       bodyText: body,
       bodyStyle: "bold",
-      footerText: "Developed by: **Aljur Pogoy**"
+      footerText: "Modefied by: Raniel"
     });
     let sentMessageID: string;
     await new Promise(resolve => {

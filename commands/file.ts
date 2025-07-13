@@ -25,7 +25,7 @@ const file: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: "Please provide a valid filename (e.g., /file ai.js or /file ai.ts).",
         bodyStyle: "sansSerif",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(errorMessage, threadID, messageID);
     }
@@ -38,7 +38,7 @@ const file: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `File ${filename} not found.`,
         bodyStyle: "sansSerif",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(errorMessage, threadID, messageID);
     }
@@ -50,7 +50,7 @@ const file: ShadowBot.Command = {
       headerStyle: "bold",
       bodyText: `Found ${filename}. Would you like to see the raw code? React with 👍 for no or 😢 for yes.`,
       bodyStyle: "sansSerif",
-      footerText: "Developed by: **Aljur pogoy**",
+      footerText: "Modefied by: Raniel",
     });
 
     const info = await new Promise((resolve, reject) => {
@@ -74,7 +74,7 @@ const file: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Raw code for ${filename} will not be displayed.`,
             bodyStyle: "sansSerif",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noMessage, threadID, messageID);
         } else if (reaction === "😢") {
@@ -84,7 +84,7 @@ const file: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Raw code for ${filename}:\n\`\`\`${filename.endsWith(".js") ? "javascript" : "typescript"}\n${rawCode}\n\`\`\``,
             bodyStyle: "sansSerif",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(codeMessage, threadID, messageID);
         }

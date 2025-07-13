@@ -18,7 +18,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Only developers can manage threads.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(errorMessage, threadID, messageID);
       return;
@@ -30,7 +30,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Database not initialized. Ensure MongoDB is connected and try again.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(errorMessage, threadID, messageID);
       return;
@@ -44,7 +44,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "Invalid thread ID. Please provide a valid numeric threadID.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(invalidMessage, threadID, messageID);
         return;
@@ -57,7 +57,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: `Thread ${targetThreadID} is already banned.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(alreadyBannedMessage, threadID, messageID);
         return;
@@ -69,7 +69,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: `Thread ${targetThreadID} has been banned. The bot will no longer respond there.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(banMessage, threadID, messageID);
       return;
@@ -82,7 +82,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "Invalid thread ID. Please provide a valid numeric threadID.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(invalidMessage, threadID, messageID);
         return;
@@ -96,7 +96,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: `Thread ${targetThreadID} has been approved.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(approveMessage, threadID, messageID);
         return;
@@ -107,7 +107,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: `Thread ${targetThreadID} is already approved.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(alreadyApprovedMessage, threadID, messageID);
       return;
@@ -121,7 +121,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "No pending threads found.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(noPendingMessage, threadID, messageID);
         return;
@@ -136,7 +136,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(pendingMessage, threadID, messageID);
       return;
@@ -152,7 +152,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "No active or banned group threads found.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(noThreadsMessage, threadID, messageID);
         return;
@@ -169,7 +169,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(listMessage, threadID, messageID);
       return;
@@ -182,7 +182,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "Invalid thread ID. Please provide a valid numeric threadID.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(invalidMessage, threadID, messageID);
         return;
@@ -195,7 +195,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: `Thread ${targetThreadID} is not banned.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**"
+          footerText: "Modefied by: Raniel"
         });
         await api.sendMessage(notBannedMessage, threadID, messageID);
         return;
@@ -207,7 +207,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: `Thread ${targetThreadID} has been unbanned. The bot will now respond there.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**"
+        footerText: "Modefied by: Raniel"
       });
       await api.sendMessage(unbanMessage, threadID, messageID);
       return;
@@ -218,7 +218,7 @@ module.exports = {
       headerStyle: "bold",
       bodyText: "Usage:\n• /thread ban <threadID>\n• /thread approve <threadID>\n• /thread pending\n• /thread list\n• /thread unban <threadID>",
       bodyStyle: "bold",
-      footerText: "Developed by: **Aljur pogoy**"
+      footerText: "Modefied by: Raniel"
     });
     await api.sendMessage(usageMessage, threadID, messageID);
   },

@@ -1,10 +1,10 @@
 const axios = require("axios");
 module.exports = {
     config: {
-        name: "rbg",
+        name: "removebg",
         description: "rbg sir!.",
         author: "Aljur pogoy",
-        usage: "#rbg (reply to a photo)",
+        usage: "removebg(reply to a photo)",
         nonPrefix: true,
         version: "4.0.0"
     },

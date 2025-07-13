@@ -17,7 +17,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Please provide Python code to run (e.g., #python print('Hello')) or reply with code.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -35,7 +35,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Security restriction: Dangerous or inappropriate commands (e.g., bad words, 'while True', 'for;;', 'os.system', or file operations) are not allowed.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -47,7 +47,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Anti-spam: Code contains very large numbers, which can freeze execution.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -59,7 +59,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Anti-spam: Too many print statements (limit: 10).",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -71,7 +71,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Anti-spam: Too many loops detected (limit: 3).",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -86,7 +86,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "Anti-spam: Range iteration exceeds 100 items (e.g., for i in range(1, 1001)).",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         return api.sendMessage(styledMessage, threadID, messageID);
       }
@@ -98,7 +98,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Anti-spam: Code exceeds 300 characters.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -114,7 +114,7 @@ module.exports = {
           headerStyle: "bold",
           bodyText: "Anti-spam: Output exceeds 4096 characters.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         return api.sendMessage(styledMessage, threadID, messageID);
       }
@@ -127,7 +127,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: responseMessage || "✅ Code executed with no output.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(styledMessage, threadID, messageID);
     } catch (error) {
@@ -140,7 +140,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: `Compilation Error: ${errorMessage || "Failed to execute Python code"}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(styledMessage, threadID, messageID);
       await api.setMessageReaction("❌", messageID, () => {});

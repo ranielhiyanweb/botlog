@@ -99,7 +99,7 @@ const gagstockCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Gagstock tracking stopped.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(offMessage, threadID, messageID);
       } else {
@@ -109,7 +109,7 @@ const gagstockCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "You don't have an active gagstock session.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(noSessionMessage, threadID, messageID);
       }
@@ -122,7 +122,7 @@ const gagstockCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: "Usage:\n• /gagstock on\n• /gagstock on Sunflower | Watering Can\n• /gagstock off",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
         });
       await api.sendMessage(usageMessage, threadID, messageID);
       return;
@@ -134,7 +134,7 @@ const gagstockCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: "You're already tracking Gagstock. Use /gagstock off to stop.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(activeMessage, threadID, messageID);
       return;
@@ -145,7 +145,7 @@ const gagstockCommand: ShadowBot.Command = {
       headerStyle: "bold",
       bodyText: "Gagstock tracking started via WebSocket!",
       bodyStyle: "bold",
-      footerText: "Developed by: **Aljur pogoy**",
+      footerText: "Modefied by: Raniel",
     });
     await api.sendMessage(startMessage, threadID, messageID);
     let ws: WebSocket;

@@ -74,7 +74,7 @@ const helpCommand: ShadowBot.Command = {
       headerStyle: "bold",
       bodyText: body,
       bodyStyle: "sansSerif",
-      footerText: "Developed by: **Aljur Pogoy**"
+      footerText: "Modefied by: Raniel"
     });
     let sentMessageID: string;
     if (args.length > 0 && args[0].toLowerCase() === "all") {

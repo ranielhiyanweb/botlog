@@ -33,7 +33,7 @@ const busyCommand = {
             headerStyle: 'bold',
             bodyText: `${userName} (${userID}) is busy.\n${LINE}\nReason: ${message}\n`,
             bodyStyle: 'bold',
-            footerText: 'Developed by: Aljur Pogoy',
+            footerText: 'Modefied by: Raniely',
           });
           await api.sendMessage(
             { body: styledMessage, mentions: [{ tag: `@${userName}`, id: userID }] },
@@ -50,7 +50,7 @@ const busyCommand = {
         headerStyle: 'bold',
         bodyText: `${LINE}\nFailed to process busy response: ${error.message}\n${LINE}`,
         bodyStyle: 'bold',
-        footerText: 'Developed by: Aljur Pogoy',
+        footerText: 'Modefied by: Raniely',
       });
       await api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -65,7 +65,7 @@ const busyCommand = {
         headerStyle: 'bold',
         bodyText: `\nUsage: /busy set <message> | /busy list | /busy remove`,
         bodyStyle: 'bold',
-        footerText: 'Developed by: Aljur Pogoy',
+        footerText: 'Modefied by: Raniely',
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -89,7 +89,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\nPlease provide a busy message (e.g., /busy set I’m busy!).\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         return api.sendMessage(styledMessage, threadID, messageID);
       }
@@ -111,7 +111,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\nGlobal busy message set for ${userName} (${senderID}): ${message}\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         await api.sendMessage(styledMessage, threadID, messageID);
       } catch (error) {
@@ -121,7 +121,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\nFailed to set busy message: ${error.message}\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         await api.sendMessage(styledMessage, threadID, messageID);
         await api.setMessageReaction('❌', messageID, () => {});
@@ -135,7 +135,7 @@ const busyCommand = {
             headerStyle: 'bold',
             bodyText: `${LINE}\nNo users have set a global busy status.\n${LINE}`,
             bodyStyle: 'bold',
-            footerText: 'Developed by: Aljur Pogoy',
+            footerText: 'Modefied by: Raniely',
           });
           return api.sendMessage(styledMessage, threadID, messageID);
         }
@@ -149,7 +149,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `Busy users across all threads:\n${LINE}\n${busyText}\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         await api.sendMessage(styledMessage, threadID, messageID);
         console.log(`[EVENT_DEBUG] global busy list displayed for thread ${threadID}`);
@@ -161,7 +161,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\nFailed to list busy users: ${error.message}\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         await api.sendMessage(styledMessage, threadID, messageID);
         await api.setMessageReaction('❌', messageID, () => {});
@@ -174,7 +174,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\nYou have not set a global busy status.\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         return api.sendMessage(styledMessage, threadID, messageID);
       }
@@ -190,7 +190,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\n${userName} (${senderID}) is no longer busy globally.\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         await api.sendMessage(styledMessage, threadID, messageID);
         console.log(`[EVENT_DEBUG] busy status removed globally for user ${senderID}`);
@@ -202,7 +202,7 @@ const busyCommand = {
           headerStyle: 'bold',
           bodyText: `${LINE}\nFailed to remove busy status: ${error.message}\n${LINE}`,
           bodyStyle: 'bold',
-          footerText: 'Developed by: Aljur Pogoy',
+          footerText: 'Modefied by: Raniely',
         });
         await api.sendMessage(styledMessage, threadID, messageID);
         await api.setMessageReaction('❌', messageID, () => {});
@@ -214,7 +214,7 @@ const busyCommand = {
         headerStyle: 'bold',
         bodyText: `${LINE}\nUsage: /busy set <message> | /busy list | /busy remove\n${LINE}`,
         bodyStyle: 'bold',
-        footerText: 'Developed by: Aljur Pogoy',
+        footerText: 'Modefied by: Raniely',
       });
       await api.sendMessage(styledMessage, threadID, messageID);
     }

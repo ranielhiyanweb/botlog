@@ -105,7 +105,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Please provide a name. Usage: /mines register <name>",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(errorMessage, threadID, messageID);
         return;
@@ -117,7 +117,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `You are already registered as ${userData.name}. Use /mines profile to check your status.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(alreadyRegistered, threadID, messageID);
         return;
@@ -130,7 +130,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Registered as ${name}. Use /mines start <name_pickaxe> to begin mining!`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(registerMessage, threadID, messageID);
       userData.exp += 200;
@@ -145,7 +145,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: "You need to register first. Usage: /mines register <name>",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(notRegistered, threadID, messageID);
       return;
@@ -160,7 +160,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Please specify a pickaxe. Usage: /mines start <name_pickaxe>",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(noPickaxe, threadID, messageID);
         return;
@@ -172,7 +172,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Invalid pickaxe. Available pickaxe: ${Object.keys(userData.equipment.pickaxes)[0].replace("_", " ")}. Use /mines inventory to verify.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidPickaxe, threadID, messageID);
         return;
@@ -186,7 +186,7 @@ const minesCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Invalid pickaxe for switch. Available pickaxe: ${Object.keys(userData.equipment.pickaxes)[0].replace("_", " ")}. Usage: /mines start switch <name_pickaxe>`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(invalidSwitch, threadID, messageID);
           return;
@@ -198,7 +198,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Switched to ${switchPickaxe.replace("_", " ")} (Level ${userData.equipment.pickaxes[switchPickaxe]}). Use /mines collect to mine with it.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(switchMessage, threadID, messageID);
         userData.exp += 200;
@@ -214,7 +214,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Mining started with ${pickaxe.replace("_", " ")} (Level ${userData.equipment.pickaxes[pickaxe]}). Use /mines collect to gather resources!`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(startMessage, threadID, messageID);
       userData.exp += 200;
@@ -230,7 +230,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "You must start mining first! Use /mines start <name_pickaxe>.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(notStarted, threadID, messageID);
         return;
@@ -267,7 +267,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: collectMessage,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(afkResult, threadID, messageID);
       }
@@ -304,7 +304,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: collectMessage,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(collectResult, threadID, messageID);
       await saveMinerData(db, senderID.toString(), userData);
@@ -319,7 +319,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Name: ${userData.name}\nEXP: ${userData.exp}\nRank: ${userData.rank}\nCurrent Pickaxe: ${currentPickaxe.replace("_", " ")} (Level ${userData.equipment.pickaxes[currentPickaxe] || 1})`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(profileMessage, threadID, messageID);
       return;
@@ -336,7 +336,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Materials:\n- Diamond Ore: ${diamondOre}\n- Gold Ore: ${goldOre}\n- Silver Ore: ${silverOre}\nAFK Materials (Collect with /mines collect):\n- Diamond Ore: ${afkDiamonds}\n- Gold Ore: ${afkGold}\n- Silver Ore: ${afkSilver}\nEquipment: ${Object.keys(userData.equipment.pickaxes)[0].replace("_", " ")} (Level ${userData.equipment.pickaxes[Object.keys(userData.equipment.pickaxes)[0]]})`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(inventoryMessage, threadID, messageID);
       return;
@@ -353,7 +353,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Gained ${expGain} EXP! New Rank: ${userData.rank}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(restMessage, threadID, messageID);
       return;
@@ -372,7 +372,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Fought ${enemy}, gained ${expGain} EXP! New Rank: ${userData.rank}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(tournamentMessage, threadID, messageID);
       return;
@@ -409,7 +409,7 @@ const minesCommand: ShadowBot.Command = {
           return `- ${key}: ${displayText} (Cost: ${costStr})`;
         }).join("\n") + "\nUse /mines buy <key> to purchase.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(shopMessage, threadID, messageID);
       userData.exp += 200;
@@ -444,7 +444,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid key. Use /mines shop to see available keys.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidItem, threadID, messageID);
         return;
@@ -460,7 +460,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "You don't have enough resources to buy this item.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(insufficientMessage, threadID, messageID);
         return;
@@ -482,7 +482,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Purchased ${key.replace("_", " ")}! ${itemData.effect || `You now have more ${key.replace("_", " ")}.`}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(buyMessage, threadID, messageID);
       userData.exp += 200;
@@ -498,7 +498,7 @@ const minesCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "You need a pickaxe to upgrade! Buy one from /mines shop.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(noPickaxe, threadID, messageID);
         return;
@@ -564,7 +564,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: upgradeMessage,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
 
       let sentMessageID;
@@ -591,7 +591,7 @@ const minesCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: "Invalid format or pickaxe. Use: <pickaxe> <upgrade> (e.g., obsidian_pickaxe iron_upgrade).",
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             }),
             threadID,
             messageID
@@ -610,7 +610,7 @@ const minesCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: "Invalid upgrade choice.",
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             }),
             threadID,
             messageID
@@ -627,7 +627,7 @@ const minesCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: `${currentPickaxe.replace("_", " ")} is at max level (80)!`,
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             }),
             threadID,
             messageID
@@ -645,7 +645,7 @@ const minesCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: "You don't have enough resources to upgrade!",
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             }),
             threadID,
             messageID
@@ -666,7 +666,7 @@ const minesCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Upgraded ${currentPickaxe.replace("_", " ")} to Level ${userData.equipment.pickaxes[currentPickaxe]}! ${upgrade.ability} (x${getCollectionMultiplier(userData.equipment.pickaxes[currentPickaxe], userData.rank)} multiplier).`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           }),
           threadID,
           messageID
@@ -692,7 +692,7 @@ const minesCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: leaderboardMessage,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
 
       await api.sendMessage(leaderboardPrompt, threadID, messageID);
@@ -707,7 +707,7 @@ const minesCommand: ShadowBot.Command = {
       headerStyle: "bold",
       bodyText: "Usage:\n/mines register <name>\n/mines start <name_pickaxe>\n/mines collect\n/mines start switch <name_pickaxe>\n/mines rest\n/mines tournament\n/mines shop\n/mines buy <key>\n/mines upgrade\n/mines leaderboard",
       bodyStyle: "bold",
-      footerText: "Developed by: **Aljur pogoy**",
+      footerText: "Modefied by: Raniel",
     });
     await api.sendMessage(helpMessage, threadID, messageID);
   },

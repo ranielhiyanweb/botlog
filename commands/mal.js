@@ -16,7 +16,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Please provide an anime title (e.g., /mal The misfit of demon king academy)",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(errorMessage, threadID, messageID);
       return;
@@ -79,7 +79,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Failed to fetch anime details. Check the title or try again later!",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(errorMessage, threadID, messageID);
       await api.setMessageReaction("❌", messageID, () => {});

@@ -20,7 +20,7 @@ module.exports = {
       if (err) {
         sendMessage(api, { threadID, message: "❌ Failed to kick user." });
       } else {
-        sendMessage(api, { threadID, message: `✅ Successfully kicked ${mentions[targetUserID]}` });
+        sendMessage(api, { threadID, message: `✅ Bye bye  ${mentions[targetUserID]}. Stupid nega` });
       }
     });
   },

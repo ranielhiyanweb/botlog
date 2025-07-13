@@ -15,7 +15,7 @@ module.exports = {
       headerStyle: "bold",
       bodyText: body,
       bodyStyle: "monospace",
-      footerText: "Developed by: **Aljur Pogoy**"
+      footerText: "Modefied by: Raniel"
     });
     try {
       const response = await axios.get("https://rapido.zetsu.xyz/api/quote");

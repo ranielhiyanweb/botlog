@@ -71,7 +71,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Please provide a hunter name. Usage: /sl register <name>",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(errorMessage, threadID, messageID);
         return;
@@ -85,7 +85,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `The name "${name}" is already taken. Please choose a different name.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(duplicateName, threadID, messageID);
         return;
@@ -97,7 +97,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `You are already registered as ${userData.name}. Use /sl status to check your stats.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(alreadyRegistered, threadID, messageID);
         return;
@@ -123,7 +123,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `${name} registered as a hunter! Default rank: E. Use /sl status to see your stats.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(registerMessage, threadID, messageID);
       return;
@@ -136,7 +136,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: "You need to register first. Usage: /sl register <name>",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(notRegistered, threadID, messageID);
       return;
@@ -151,7 +151,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Name: ${userData.name}\nLevel: ${Math.max(1, Number(userData.level) || 1)}\nEXP: ${Math.max(0, Number(userData.exp) || 0)}\nRank: ${userData.rank || "E"}\nRole: ${userData.role || "None"}\nStats: Strength ${Math.max(0, Number(stats.strength) || 0)}, Agility ${Math.max(0, Number(stats.agility) || 0)}, Mana ${Math.max(0, Number(stats.mana) || 0)}\nEquipped Sword: ${equippedSword[0].replace("_", " ")} (Level ${Math.max(1, Number(equippedSword[1]) || 1)})\nShadows: ${userData.shadows.length > 0 ? userData.shadows.map(s => `${s.name} (${s.nickname})`).join(", ") : "None"}\nGuild: ${userData.guild || "None"}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(statusMessage, threadID, messageID);
       return;
@@ -166,7 +166,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "Only X rank hunters can use /sl battle X!",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(restrictedMessage, threadID, messageID);
           return;
@@ -182,7 +182,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `X Rank Supremacy! Defeated ${enemy} instantly by ${userData.name}! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}. Reply with 'arise ${enemy} <nickname>' to awaken this Shadow Monarch!`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         let sentMessageID;
         await new Promise((resolve) => {
@@ -213,7 +213,7 @@ const soloLevelingCommand: ShadowBot.Command = {
                 headerStyle: "bold",
                 bodyText: `Awakened Supreme Monarch as ${nickname}! Gain +1000 Strength, +1000 Agility, +2000 Mana.`,
                 bodyStyle: "bold",
-                footerText: "Developed by: **Aljur pogoy**",
+                footerText: "Modefied by: Raniel",
               }),
               threadID,
               event.messageID
@@ -273,7 +273,7 @@ const soloLevelingCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: `Congratulations ${userData.name}! You’ve reached X Rank! Sung Jin-Woo has arisen with +10k Strength, +10k Agility, +20k Mana!`,
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             }),
             threadID,
             messageID
@@ -292,7 +292,7 @@ const soloLevelingCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: `God Mode Activated! All enemies defeated instantly by ${userData.name}! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}.`,
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             });
             await saveHunterData(db, senderID.toString(), userData);
             await api.sendMessage(godModeMessage, threadID, messageID);
@@ -304,7 +304,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Victory! You defeated ${enemy} with strength ${userStrength} vs ${enemyStrength}! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
 
           if (userData.rank === "S" && isMonarch) {
@@ -314,7 +314,7 @@ const soloLevelingCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: `Victory! You defeated ${enemy} with strength ${userStrength} vs ${enemyStrength}! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}. Reply with 'arise ${enemy} <nickname>' to awaken this Shadow Monarch!`,
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             });
             let sentMessageID;
             await new Promise((resolve) => {
@@ -356,7 +356,7 @@ const soloLevelingCommand: ShadowBot.Command = {
                       headerStyle: "bold",
                       bodyText: `Awakened ${normalizedEnemy} as ${nickname}! Gain ${boosts.strength} Strength, ${boosts.agility} Agility, ${boosts.mana} Mana.`,
                       bodyStyle: "bold",
-                      footerText: "Developed by: **Aljur pogoy**",
+                      footerText: "Modefied by: Raniel",
                     }),
                     threadID,
                     event.messageID
@@ -377,7 +377,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Defeated by ${enemy} (strength ${enemyStrength} vs ${userStrength}). Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}. Train harder!`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await saveHunterData(db, senderID.toString(), userData);
           await api.sendMessage(battleMessage, threadID, messageID);
@@ -391,7 +391,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `X Rank Dominance! All enemies defeated instantly! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await saveHunterData(db, senderID.toString(), userData);
         await api.sendMessage(battleMessage, threadID, messageID);
@@ -408,7 +408,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "No enemies encountered this time. Gained 100 EXP, 100 Agility, and 100 Mana! New Level: " + userData.level,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await saveHunterData(db, senderID.toString(), userData);
         await api.sendMessage(noEncounterMessage, threadID, messageID);
@@ -426,7 +426,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Last Tier: ${userData.rank || "E"}\nCooldown: ${remaining} mins\nMaterials: ${Object.entries(userData.inventory.materials || {}).map(([k, v]) => `${k} x${Math.max(0, Number(v) || 0)}`).join(", ") || "None"}`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(statusMessage, threadID, messageID);
         return;
@@ -440,7 +440,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid tier. Use /sl dungeon <tier> (D, C, B, A, S).",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidTier, threadID, messageID);
         return;
@@ -453,7 +453,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Cooldown active. Wait ${Math.ceil(remaining / 60)} minutes.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(cooldownMessage, threadID, messageID);
         return;
@@ -489,7 +489,7 @@ const soloLevelingCommand: ShadowBot.Command = {
               headerStyle: "bold",
               bodyText: `God Mode Activated! All enemies in ${tier}-tier dungeon defeated instantly by ${userData.name}! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}.`,
               bodyStyle: "bold",
-              footerText: "Developed by: **Aljur pogoy**",
+              footerText: "Modefied by: Raniel",
             });
             await saveHunterData(db, senderID.toString(), userData);
             await api.sendMessage(godModeMessage, threadID, messageID);
@@ -535,7 +535,7 @@ const soloLevelingCommand: ShadowBot.Command = {
                 headerStyle: "bold",
                 bodyText: `Congratulations ${userData.name}! You’ve reached X Rank! Sung Jin-Woo has arisen with +10k Strength, +10k Agility, +20k Mana!`,
                 bodyStyle: "bold",
-                footerText: "Developed by: **Aljur pogoy**",
+                footerText: "Modefied by: Raniel",
               }),
               threadID,
               messageID
@@ -550,7 +550,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `You entered a ${tier}-tier dungeon! Victory! You defeated ${enemy} with strength ${userStrength} vs ${enemyStrength}! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}. ${drop}`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await saveHunterData(db, senderID.toString(), userData);
           await api.sendMessage(dungeonMessage, threadID, messageID);
@@ -565,7 +565,7 @@ const soloLevelingCommand: ShadowBot.Command = {
                   headerStyle: "bold",
                   bodyText: `Defeated Ashborn! Reply with 'arise Ashborn <nickname>' to awaken this Shadow Monarch!`,
                   bodyStyle: "bold",
-                  footerText: "Developed by: **Aljur pogoy**",
+                  footerText: "Modefied by: Raniel",
                 }),
                 threadID,
                 (err, info) => {
@@ -598,7 +598,7 @@ const soloLevelingCommand: ShadowBot.Command = {
                     headerStyle: "bold",
                     bodyText: `Awakened Ashborn as ${nickname}! Gain ${boosts.strength} Strength, ${boosts.agility} Agility, ${boosts.mana} Mana.`,
                     bodyStyle: "bold",
-                    footerText: "Developed by: **Aljur pogoy**",
+                    footerText: "Modefied by: Raniel",
                   }),
                   threadID,
                   event.messageID
@@ -621,7 +621,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `You entered a ${tier}-tier dungeon! Defeated by ${enemy} (strength ${enemyStrength} vs ${userStrength}). Gained 0 EXP. ${userData.lostShadows?.length > 0 ? "Lost a shadow!" : "Train harder!"}`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await saveHunterData(db, senderID.toString(), userData);
           await api.sendMessage(dungeonMessage, threadID, messageID);
@@ -636,7 +636,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `X Rank Dominance! All enemies in ${tier}-tier dungeon defeated instantly! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await saveHunterData(db, senderID.toString(), userData);
         await api.sendMessage(dungeonMessage, threadID, messageID);
@@ -653,7 +653,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid command. Use /sl gate enter <blue/red/violet/orange>.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidGate, threadID, messageID);
         return;
@@ -667,7 +667,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid gate class. Use /sl gate enter <blue/red/violet/orange>.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidClass, threadID, messageID);
         return;
@@ -680,7 +680,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Cooldown active. Wait ${Math.ceil(remaining / 60)} minutes.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(cooldownMessage, threadID, messageID);
         return;
@@ -719,7 +719,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Congratulations ${userData.name}! You’ve reached X Rank! Sung Jin-Woo has arisen with +10k Strength, +10k Agility, +20k Mana!`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           }),
           threadID,
           messageID
@@ -733,7 +733,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `You entered a ${gateClass} gate! Successfully cleared! Gained ${expGain} EXP. New Level: ${userData.level}, Rank: ${userData.rank}.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(gateMessage, threadID, messageID);
       return;
@@ -783,7 +783,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           return `- ${key.replace("_", " ")}: ${displayText} (Cost: ${costStr}${details.limit ? `, Limit: ${details.limit}` : ""})`;
         }).join("\n") + "\nUse /sl buy <item> <quantity> to purchase.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(shopMessage, threadID, messageID);
       return;
@@ -831,7 +831,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid item or quantity. Use /sl shop to see available items, then /sl buy <item> <quantity>.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidItem, threadID, messageID);
         return;
@@ -846,7 +846,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `You don't have enough EXP (${totalCost} needed) to buy ${quantity} ${key.replace("_", " ")}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(insufficientMessage, threadID, messageID);
         return;
@@ -858,7 +858,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Limit reached for ${key.replace("_", " ")}. Max: ${itemData.limit}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(limitMessage, threadID, messageID);
         return;
@@ -876,7 +876,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Purchased ${quantity} ${key.replace("_", " ")}! ${itemData.effect || "Added to inventory."} (Cost: ${totalCost} EXP)`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(buyMessage, threadID, messageID);
       return;
@@ -892,7 +892,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Invalid potion, insufficient quantity, or not enough potions. You have ${userData.inventory.potions[potion] || 0} ${potion?.replace("_", " ") || "potion"}. Check with /sl status.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidItem, threadID, messageID);
         return;
@@ -927,7 +927,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: effectMessage,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(useMessage, threadID, messageID);
       return;
@@ -942,7 +942,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid stat. Use /sl train <strength/agility/mana>.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidStat, threadID, messageID);
         return;
@@ -958,7 +958,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Not enough EXP (${cost} needed) or stat maxed (500) unless X rank.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(insufficientMessage, threadID, messageID);
         return;
@@ -973,7 +973,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Trained ${stat}! +10 (${cost} EXP). New ${stat}: ${stats[stat]}.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(trainMessage, threadID, messageID);
       return;
@@ -999,7 +999,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Quest: Defeat ${Math.max(1, Number(quest.goal) || 1)} ${quest.target}. Progress: ${Math.max(0, Number(quest.progress) || 0)}/${Math.max(1, Number(quest.goal) || 1)}. Reward: ${Math.max(0, Number(quest.reward) || 0)} EXP.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(questMessage, threadID, messageID);
       return;
@@ -1019,7 +1019,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Already in ${userData.guild}. Leave to create a new one.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(alreadyInGuild, threadID, messageID);
           return;
@@ -1031,7 +1031,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Guild ${guildName} already exists. Join it instead!`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(guildExists, threadID, messageID);
           return;
@@ -1047,7 +1047,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Created Guild: ${guildName}. +30 Group Strength.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(createMessage, threadID, messageID);
         return;
@@ -1062,7 +1062,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "Please specify a guild name. Usage: /sl guild join <guild name>",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(invalidInput, threadID, messageID);
           return;
@@ -1074,7 +1074,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Already in ${userData.guild}. Leave to join another.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(alreadyInGuild, threadID, messageID);
           return;
@@ -1087,7 +1087,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Guild ${guildName} does not exist.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuild, threadID, messageID);
           return;
@@ -1105,7 +1105,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Joined Guild: ${targetGuild.name}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(joinMessage, threadID, messageID);
         return;
@@ -1119,7 +1119,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "You are not in a guild to leave!",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuild, threadID, messageID);
           return;
@@ -1134,7 +1134,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "Your guild no longer exists. You have been removed.",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuildFound, threadID, messageID);
           return;
@@ -1152,7 +1152,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `You have left ${currentGuild.name}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(leaveMessage, threadID, messageID);
         return;
@@ -1167,7 +1167,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "Please specify a guild to fight. Usage: /sl guild fight <guild name>",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(invalidInput, threadID, messageID);
           return;
@@ -1179,7 +1179,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "You must be in a guild to fight!",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuild, threadID, messageID);
           return;
@@ -1193,7 +1193,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Guild ${targetGuildName} does not exist.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuild, threadID, messageID);
           return;
@@ -1205,7 +1205,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "You can't fight your own guild!",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(selfFight, threadID, messageID);
           return;
@@ -1225,7 +1225,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Victory! ${myGuild.name} defeated ${targetGuild.name} (${myStrength} vs ${targetStrength})! Gained ${expGain} EXP and 1 Victory Token.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(fightMessage, threadID, messageID);
         } else {
@@ -1235,7 +1235,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Defeated! ${myGuild.name} lost to ${targetGuild.name} (${myStrength} vs ${targetStrength}). Train harder!`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(fightMessage, threadID, messageID);
         }
@@ -1250,7 +1250,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "No guilds have been created yet.",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuilds, threadID, messageID);
           return;
@@ -1262,7 +1262,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Active Guilds:\n${guildList}`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(listMessage, threadID, messageID);
         return;
@@ -1277,7 +1277,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "You must be in a guild to change its name!",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuild, threadID, messageID);
           return;
@@ -1289,7 +1289,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "Please specify a new guild name. Usage: /sl guild changename <new name>",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(invalidInput, threadID, messageID);
           return;
@@ -1304,7 +1304,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: "Your guild no longer exists. You have been removed.",
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(noGuildFound, threadID, messageID);
           return;
@@ -1316,7 +1316,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Guild ${currentGuild.name} has already changed its name once.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(alreadyChanged, threadID, messageID);
           return;
@@ -1328,7 +1328,7 @@ const soloLevelingCommand: ShadowBot.Command = {
             headerStyle: "bold",
             bodyText: `Guild name ${newGuildName} is already taken.`,
             bodyStyle: "bold",
-            footerText: "Developed by: **Aljur pogoy**",
+            footerText: "Modefied by: Raniel",
           });
           await api.sendMessage(nameTaken, threadID, messageID);
           return;
@@ -1352,7 +1352,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Guild name changed from ${currentGuild.name} to ${newGuildName}.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(changeNameMessage, threadID, messageID);
         return;
@@ -1364,7 +1364,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: "Invalid guild command. Use /sl guild [create <name> | join <guild name> | leave | fight <guild name> | list | changename <new name>].",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(invalidGuildCommand, threadID, messageID);
       return;
@@ -1385,7 +1385,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           ? topHunters.map((h, i) => `${i + 1}. ${h.name} (Level ${Math.max(1, Number(h.level) || 1)}, ${Math.max(0, Number(h.exp) || 0)} EXP, Rank ${h.rank || "E"})`).join("\n")
           : "No hunters ranked yet.",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(leaderboardMessage, threadID, messageID);
       return;
@@ -1400,7 +1400,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `Cooldown active. Wait ${Math.ceil(remaining / 60)} minutes.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(cooldownMessage, threadID, messageID);
         return;
@@ -1416,7 +1416,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Meditated successfully! +50 Mana. New Mana: ${stats.mana}.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(meditateMessage, threadID, messageID);
       return;
@@ -1435,7 +1435,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Current Shadows:\n${shadowList}\n\nLost Shadows:\n${lostShadowList}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(shadowMessage, threadID, messageID);
       return;
@@ -1451,7 +1451,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Invalid role. Use /sl setrole <tank/mage/assassin/healer/ranger>.",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidRole, threadID, messageID);
         return;
@@ -1465,7 +1465,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Role set to ${role}. Skills applied based on rank ${userData.rank}.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(roleMessage, threadID, messageID);
       return;
@@ -1480,7 +1480,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "Please provide a new name. Usage: /sl changename <newname>",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(invalidName, threadID, messageID);
         return;
@@ -1492,7 +1492,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: "You can only change your name once!",
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(alreadyChanged, threadID, messageID);
         return;
@@ -1506,7 +1506,7 @@ const soloLevelingCommand: ShadowBot.Command = {
           headerStyle: "bold",
           bodyText: `The name "${newName}" is already taken. Choose another.`,
           bodyStyle: "bold",
-          footerText: "Developed by: **Aljur pogoy**",
+          footerText: "Modefied by: Raniel",
         });
         await api.sendMessage(nameTaken, threadID, messageID);
         return;
@@ -1520,7 +1520,7 @@ const soloLevelingCommand: ShadowBot.Command = {
         headerStyle: "bold",
         bodyText: `Name changed to ${newName}.`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(changeNameMessage, threadID, messageID);
       return;
@@ -1532,7 +1532,7 @@ const soloLevelingCommand: ShadowBot.Command = {
       headerStyle: "bold",
       bodyText: "Invalid command. Usage: /sl [register <name> | status | battle | battle X | shop | buy <item> <quantity> | use <potion> <quantity> | dungeon <tier> | train <stat> | quest | guild [create <name> | join <guild name> | leave | fight <guild name> | list | changename <new name>] | leaderboard | meditate | shadowlist | setrole <class> | changename <newname> | gate enter <class>]",
       bodyStyle: "bold",
-      footerText: "Developed by: **Aljur pogoy**",
+      footerText: "Modefied by: Raniel",
     });
     await api.sendMessage(invalidCommand, threadID, messageID);
   },

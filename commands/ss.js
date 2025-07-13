@@ -21,7 +21,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: "Please provide a URL to take a screenshot (e.g., #ss https://www.facebook.com).",
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       return api.sendMessage(styledMessage, threadID, messageID);
     }
@@ -53,7 +53,7 @@ module.exports = {
         headerStyle: "bold",
         bodyText: `Failed to take screenshot: ${error.message || "Invalid URL or API issue"}`,
         bodyStyle: "bold",
-        footerText: "Developed by: **Aljur pogoy**",
+        footerText: "Modefied by: Raniel",
       });
       await api.sendMessage(styledMessage, threadID, messageID);
       await api.setMessageReaction("❌", messageID, () => {});

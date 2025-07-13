@@ -10,7 +10,7 @@ module.exports = {
     const { threadID, messageID, senderID } = event;
     if (!admins.includes(senderID)) {
       return api.sendMessage(
-        "════『 𝗢𝗨𝗧 』════\n\n❌ Only admins can use this command.",
+        "════『 𝗢𝗨𝗧 』════\n\n❌ Only Raniel hiyan can use this command.",
         threadID,
         messageID
       );
